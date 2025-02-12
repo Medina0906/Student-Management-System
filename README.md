@@ -28,15 +28,6 @@ Ky projekt është zhvilluar nga një grup prej katër personash si një mini-pr
 
 ---
 
-## 🔧 Si të ekzekutoni projektin
-
-1. **Klononi repository-n:**
-
-   ```bash
-   git clone https://github.com/username/Student-Management-System.git
-   cd Student-Management-System
-
----
 
 ## 👨‍💻 Kontributet
 
