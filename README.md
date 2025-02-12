@@ -1,3 +1,4 @@
+![Screenshot (94)](https://github.com/user-attachments/assets/d5d70059-7895-4638-b7e7-69a95d88845c)
 # Student Management System
 
 **Student Management System** është një aplikacion i thjeshtë në C++ që lejon menaxhimin e të dhënave të studentëve. 
