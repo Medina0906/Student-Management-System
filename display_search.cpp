@@ -27,7 +27,7 @@ void displayStudents(const vector<Student>& students) {
 
 // Funksioni për të kërkuar një student sipas ID-së ose emrit
 void searchStudent(const vector<Student>& students, const string& query) {
-    cout << "Duke kërkuar studentin...\n";
+    cout << "Duke kërkuar studentin...\n";   // Kjo është një mesazh që tregon përdoruesit se kërkimi është duke u kryer
     bool found = false;   // Variabël për të treguar nëse studenti u gjet
 
      // Kalon nëpër listën e studentëve dhe kontrollon për përputhje
