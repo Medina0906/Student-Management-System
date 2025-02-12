@@ -1,15 +1,18 @@
-#include <iostream>
-#include <vector>
-#include "student.h"
+#include <iostream>   // Për hyrje dhe dalje në konzolë
+#include <vector>     // Përdorimi i vektorit për ruajtjen e studentëve
+#include "student.h"  // Përfshirja e header-it që përmban strukturën e studentit
 
 using namespace std;
 
+// Funksioni për të shfaqur të gjithë studentët në listë
 void displayStudents(const vector<Student>& students) {
+    // Kontrollo nëse lista është bosh
     if (students.empty()) {
         cout << "Nuk ka studente ne liste." << endl;
-        return;
+        return;   // Dil nga funksioni nëse nuk ka studentë
     }
 
+    // Printo listën e studentëve në një format të rregullt
     cout << "Lista e studenteve:\n";
     cout << "------------------------------------\n";
     for (const auto& student : students) {
@@ -22,9 +25,11 @@ void displayStudents(const vector<Student>& students) {
     cout << "------------------------------------\n";
 }
 
+// Funksioni për të kërkuar një student sipas ID-së ose emrit
 void searchStudent(const vector<Student>& students, const string& query) {
-    bool found = false;
+    bool found = false;   // Variabël për të treguar nëse studenti u gjet
 
+     // Kalon nëpër listën e studentëve dhe kontrollon për përputhje
     for (const auto& student : students) {
         if (to_string(student.id) == query || student.name == query) {
             cout << "Student i gjetur:\n";
@@ -33,10 +38,11 @@ void searchStudent(const vector<Student>& students, const string& query) {
                  << " | Mbiemri: " << student.surname 
                  << " | Mosha: " << student.age 
                  << " | Nota Mesatare: " << student.gpa << endl;
-            found = true;
+            found = true;   // Shëno që studenti u gjet
         }
     }
 
+     // Nëse studenti nuk u gjet, shfaq mesazhin përkatës
     if (!found) {
         cout << "Studenti nuk u gjet!\n";
     }
