@@ -38,10 +38,11 @@ Ky projekt është zhvilluar nga një grup prej katër personash si një mini-pr
 
 ---
 
-👨‍💻 Kontributet
-Ky projekt është zhvilluar nga:
+## 👨‍💻 Kontributet
 
-Djellza Jakupi - Shtimi i studentëve dhe menaxhimi i strukturës së të dhënave
-Luljeta Hoti - Shfaqja dhe kërkimi i studentëve
-Medina Bajgora - Përditësimi dhe fshirja e të dhënave të studentëve
-Sara Gashi - Ruajtja dhe leximi i të dhënave nga file
+**Ky projekt është zhvilluar nga:**
+
+- Djellza Jakupi - Shtimi i studentëve dhe menaxhimi i strukturës së të dhënave
+- Luljeta Hoti - Shfaqja dhe kërkimi i studentëve
+- Medina Bajgora - Përditësimi dhe fshirja e të dhënave të studentëve
+- Sara Gashi - Ruajtja dhe leximi i të dhënave nga file
