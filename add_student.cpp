@@ -97,7 +97,25 @@ void searchStudent() {
     cout << "Studenti me ID " << id << " nuk u gjet.\n";
 }
 
-// 7. Funksioni kryesor
+// 7. Funksioni per te fshire nje student sipas ID
+void deleteStudent() {
+    int id;
+    cout << "\n===== FSHI STUDENT =====\n";
+    cout << "Shkruaj ID-në e studentit për të fshirë: ";
+    cin >> id;
+
+    for (auto it = studentList.begin(); it != studentList.end(); ++it) {
+        if (it->id == id) {
+            studentList.erase(it);
+            cout << "Studenti u fshi me sukses!\n";
+            return;
+        }
+    }
+
+    cout << "Studenti me ID " << id << " nuk u gjet.\n";
+}
+
+// 8. Funksioni kryesor
 int main() {
     int choice;
 
