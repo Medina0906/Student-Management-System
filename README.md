@@ -36,7 +36,7 @@ Ky projekt është zhvilluar nga një grup prej katër personash si një mini-pr
 - Medina Bajgora - Përditësimi dhe fshirja e të dhënave të studentëve
 - Sara Gashi - Ruajtja dhe leximi i të dhënave nga file
 
-💙 Ju mirëpresim për çdo sugjerim ose përmirësim!
+Ju mirëpresim për çdo sugjerim ose përmirësim!
 ---
 ---
 
