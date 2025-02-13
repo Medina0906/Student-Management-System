@@ -4,6 +4,7 @@
 
 using namespace std;
 
+// 1. Definojme strukturen Student
 struct Student {
     int id;
     string emri;
@@ -12,8 +13,10 @@ struct Student {
     double notaMesatare;
 };
 
+// 2. Krijojme nje vektor per ruajtjen e studenteve
 vector<Student> studentList;
 
+// 3. Funksioni per te shtuar studente
 void addStudent() {
     Student newStudent;
 
@@ -32,6 +35,7 @@ void addStudent() {
     cout << "Enter Nota Mesatare: ";
     cin >> newStudent.notaMesatare;
 
+    // Shtojme studentin e ri ne vektor
     studentList.push_back(newStudent);
 
     cout << "Studenti u shtua me sukses!\n";
@@ -42,7 +46,7 @@ int main() {
 
     while (true) {
         cout << "\n1. Shto Student\n";
-        cout << "2. Shfaq Studentet\n";
+        cout << "2. Paraqit Studentet\n";
         cout << "3. Dal\n";
         cout << "Zgjedhja juaj: ";
         cin >> choice;
@@ -51,7 +55,8 @@ int main() {
             addStudent();
         } else if (choice == 2) {
 
-cout << "Lista e studenteve:\n";
+          // Paraqesim studenet
+          cout << "Lista e studenteve:\n";
             for (const auto& student : studentList) {
                 cout << "ID: " << student.id << ", Emri: " << student.emri << ", Mbiemri: " << student.mbiemri
                      << ", Mosha: " << student.mosha << ", Nota Mesatare: " << student.notaMesatare << endl;
