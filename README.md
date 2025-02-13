@@ -8,20 +8,18 @@ Ky projekt është zhvilluar nga një grup prej katër personash si një mini-pr
 
 ## 🚀 Funksionalitetet Kryesore
 
-- ✅ Shtimi i studentëve të rinj - Mund të shtoni studentë të rinj në sistem duke plotësuar informacionet e nevojshme.
-- ✅ Shfaqja e listës së studentëve
-- ✅ Kërkimi i studentëve sipas ID ose emrit
-- ✅ Përditësimi i të dhënave të studentëve - Mund të përditësoni informacionin e studentëve ekzistues.
-- ✅ Fshirja e studentëve nga lista - Mund të fshini studentë nga sistemi.
+- 👨‍🎓 Shtimi i studentëve të rinj - Mund të shtoni studentë të rinj në sistem duke plotësuar informacionet e nevojshme.
+- 📋 Shfaqja e listës së studentëve
+- 🔍 Kërkimi i studentëve sipas ID ose emrit
+- 📝 Përditësimi i të dhënave të studentëve - Mund të përditësoni informacionin e studentëve ekzistues.
+- 🗑️ Fshirja e studentëve nga lista - Mund të fshini studentë nga sistemi.
 - ✅ Ruajtja dhe leximi i të dhënave nga file - Të gjitha të dhënat e studentëve ruhen në një strukturë të organizuar dhe mund të shihen ose modifikohen në çdo kohë.
 
 ---
 
-## 🛠 Teknologjitë e Përdorura
-
-- **Gjuha e Programimit:** C++
-- **Mjedisi i Zhvillimit:** Kompiler C++ (Code::Blocks,  Visual Studio Code, etj.)
-- **Kontrolli i Versioneve:** Git & GitHub
+## 🛠️ Teknologjitë e përdorura:
+- Gjuha programuese: C++
+- Git & GitHub, Visual Studio Code
 
 ---
 
@@ -38,13 +36,14 @@ Ky projekt është zhvilluar nga një grup prej katër personash si një mini-pr
 - Medina Bajgora - Përditësimi dhe fshirja e të dhënave të studentëve
 - Sara Gashi - Ruajtja dhe leximi i të dhënave nga file
 
+💙 Ju mirëpresim për çdo sugjerim ose përmirësim!
 ---
 ---
 
 ## Instalimi
 Për të instaluar dhe përdorur projektin, ndiqni këto hapa:
 
-1. **Klononi repo-n**:
+1. **Klononi projektin**:
    ```bash
    git clone https://github.com/Medina0906/Student-Management-System.git
 
