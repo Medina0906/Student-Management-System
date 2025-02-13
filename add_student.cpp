@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <iomanip>
 
 using namespace std;
 
@@ -16,23 +17,42 @@ struct Student {
 // 2. Krijojme nje vektor per ruajtjen e studenteve
 vector<Student> studentList;
 
-// 3. Funksioni per te shtuar studente
+// 3. Funksioni per te paraqitur menyne kryesore
+void displayMenu() {
+    cout << "\n===== MENU KRYESOR =====\n";
+    cout << "1. Shto Student\n";
+    cout << "2. Shfaq Studentet\n";
+    cout << "3. Kerko Student\n";
+    cout << "4. Fshi Student\n";
+    cout << "5. Dal\n";
+    cout << "Zgjedhja juaj: ";
+}
+
+// 4. Funksioni per te shtuar studentin e ri
 void addStudent() {
     Student newStudent;
 
-    cout << "Enter ID: ";
+    cout << "\n===== SHTO STUDENT =====\n";
+    cout << "ID: ";
     cin >> newStudent.id;
 
-    cout << "Enter Emri: ";
+    // Kontrollojme nese ekziston ID
+    for (const auto& student : studentList) {
+        if (student.id == newStudent.id) {
+            cout << "Gabim: ID ekziston tashmë!\n";
+            return;
+        }
+    }
+    cout << "Emri: ";
     cin >> newStudent.emri;
 
-    cout << "Enter Mbiemri: ";
+    cout << "Mbiemri: ";
     cin >> newStudent.mbiemri;
 
-    cout << "Enter Mosha: ";
+    cout << "Mosha: ";
     cin >> newStudent.mosha;
 
-    cout << "Enter Nota Mesatare: ";
+    cout << "Nota Mesatare: ";
     cin >> newStudent.notaMesatare;
 
     // Shtojme studentin e ri ne vektor
@@ -41,30 +61,67 @@ void addStudent() {
     cout << "Studenti u shtua me sukses!\n";
 }
 
+// 5. Fuksioni per te paraqitur te gjithe studentet
+void displayStudents() {
+    if (studentList.empty()) {
+        cout << "\nNuk ka studentë të regjistruar!\n";
+        return;
+    }
+
+    cout << "\n===== LISTA E STUDENTËVE =====\n";
+    cout << setw(5) << "ID" << setw(15) << "Emri" << setw(15) << "Mbiemri" << setw(10) << "Mosha" << setw(15) << "Nota Mesatare\n";
+    cout << "-------------------------------------------------\n";
+
+    for (const auto& student : studentList) {
+        cout << setw(5) << student.id << setw(15) << student.emri << setw(15) << student.mbiemri
+             << setw(10) << student.mosha << setw(15) << student.notaMesatare << endl;
+    }
+}
+
+// 6. Funksioni per te kerkuar nje student sipas ID
+void searchStudent() {
+    int id;
+    cout << "\n===== KERKO STUDENT =====\n";
+    cout << "Shkruaj ID-në e studentit: ";
+    cin >> id;
+
+    for (const auto& student : studentList) {
+        if (student.id == id) {
+            cout << "\nStudenti u gjet:\n";
+            cout << "ID: " << student.id << ", Emri: " << student.emri << ", Mbiemri: " << student.mbiemri
+                 << ", Mosha: " << student.mosha << ", Nota Mesatare: " << student.notaMesatare << endl;
+            return;
+        }
+    }
+
+    cout << "Studenti me ID " << id << " nuk u gjet.\n";
+}
+
+// 7. Funksioni kryesor
 int main() {
     int choice;
 
     while (true) {
-        cout << "\n1. Shto Student\n";
-        cout << "2. Paraqit Studentet\n";
-        cout << "3. Dal\n";
-        cout << "Zgjedhja juaj: ";
+        displayMenu();
         cin >> choice;
-      
-      if (choice == 1) {
-            addStudent();
-        } else if (choice == 2) {
-
-          // Paraqesim studenet
-          cout << "Lista e studenteve:\n";
-            for (const auto& student : studentList) {
-                cout << "ID: " << student.id << ", Emri: " << student.emri << ", Mbiemri: " << student.mbiemri
-                     << ", Mosha: " << student.mosha << ", Nota Mesatare: " << student.notaMesatare << endl;
-            }
-        } else if (choice == 3) {
-            break;
-        } else {
-            cout << "Zgjedhje e pavlefshme!\n";
+        switch (choice) {
+            case 1:
+                addStudent();
+                break;
+            case 2:
+                displayStudents();
+                break;
+            case 3:
+                searchStudent();
+                break;
+            case 4:
+                deleteStudent();
+                break;
+            case 5:
+                cout << "Duke dalë nga programi...\n";
+                return 0;
+            default:
+                cout << "Zgjedhje e pavlefshme! Ju lutem provoni përsëri.\n";
         }
     }
 
